@@ -1,0 +1,34 @@
+﻿@model TeaStall_Management_System.Models.TeaInventory
+
+@{
+    ViewBag.Title = "Get_InventoryById";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="~/Content/GetInventory.css" rel="stylesheet" />
+ <div style="align-self:center">
+        <table style="border-color:forestgreen;border-style:groove">
+            <caption class="styleindex1"><b>Item Info</b></caption>
+            <tr>
+                <td class="styleindex">
+                    Item Name:
+                </td>
+                <td class="styleindex2">@Html.DisplayFor(model => model.TeaName)</td>
+            </tr>
+            <tr>
+                <td class="styleindex">
+                    Item Description:
+                </td>
+                <td class="styleindex2">@Html.DisplayFor(model => model.Description)</td>
+            </tr>
+            <tr>
+                <td class="styleindex">
+                    Item Price:
+                </td>
+                <td class="styleindex2">@Html.DisplayFor(model => model.Price)</td>
+            </tr>
+        </table>
+    </div>
+    <p>
+        @Html.ActionLink("Back to Menu", "Index")
+    </p>
+

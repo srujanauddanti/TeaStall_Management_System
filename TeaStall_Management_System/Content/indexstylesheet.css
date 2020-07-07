@@ -1,0 +1,102 @@
+﻿       tr{
+           text-align:center;
+          
+       }
+       .styletab1{
+           font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:large;
+           font-weight:bolder;
+           font-style:italic;
+           color:crimson;
+           text-align:left;
+       }
+       .styleindex2
+       {
+           font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:small;
+           font-weight:bolder;
+           font-style:italic;
+           color:forestgreen;
+           text-align:center;
+           
+           width:auto
+       }
+       .styleindex3{
+           font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:small;
+           font-weight:bolder;
+           font-style:italic;
+           text-align:center;
+           background-color:white;
+           color:forestgreen
+             
+       }
+       .styleindex4{
+           font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:large;
+           font-weight:bolder;
+           font-style:italic;
+           color:crimson;
+           text-align:left;
+       }
+       table
+       {
+           /*background-color:white;*/
+           border-collapse:collapse;
+       }
+       /*form{
+           background-color:white;
+       }*/
+       tbody{
+           height: 200px;
+           overflow-y: scroll;
+       }
+       input[type=text] {
+  border: 1px solid green;
+  border-radius: 4px;
+  color:forestgreen
+}
+       input[type=number] {
+  border: 1px solid green;
+  border-radius: 4px;
+  color:forestgreen
+}
+       textarea{
+           border: 1px solid green;
+  border-radius: 4px;
+  color:forestgreen
+       }
+       thead
+       {
+           background-color:greenyellow;
+       }
+ .button {
+  background-color:green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ .button2{
+  background-color:green;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+ .button3{
+  background-color:red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+ 

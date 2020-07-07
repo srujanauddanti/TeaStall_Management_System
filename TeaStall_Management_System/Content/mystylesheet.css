@@ -1,0 +1,50 @@
+﻿
+        .style1
+        {
+            height:200px;
+            width:50px;
+        }
+        .style2
+        {
+            height:20px;
+            width:300px;
+            text-align:center;
+            
+        }
+        .style3
+        {
+            height:500px;
+            width:200px;
+            
+        }
+        .style4{
+            height:500px;
+            width:400px;
+            
+            
+        }
+        .style6{
+            background-color:white;
+        }
+        .style5{
+            height:10px;
+            width:auto;
+            text-align:left;
+        }
+        footer{
+            font-size:large;
+            font-family:'Times New Roman', Times, serif
+        }
+        .style7{
+            border-collapse:collapse;
+            width:400px;
+           
+        }
+        .style8
+        {
+     background-color:greenyellow;
+ }
+        .stylebody{
+            background-image:url('/Images/amrittulya.png')
+        }
+ 

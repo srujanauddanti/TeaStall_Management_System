@@ -1,0 +1,39 @@
+﻿div{
+        background-color:white;
+    }
+.styleindex{
+     font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:large;
+           font-weight:bolder;
+           font-style:italic;
+           color:crimson;
+           text-align:left;
+
+ }
+.styleindex2{
+     font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:large;
+           font-weight:bolder;
+           font-style:italic;
+           color:forestgreen;
+           text-align:left;
+
+ }
+.styleindex1{
+     font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:large;
+           font-weight:bolder;
+           font-style:italic;
+           color:crimson;
+           text-align:center;
+
+ }
+p{
+     font-family:Comic Sans MS, cursive, sans-serif;
+           font-size:large;
+           font-weight:bolder;
+           font-style:italic;
+           color:forestgreen;
+           text-align:left;
+
+ }

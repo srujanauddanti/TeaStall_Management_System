@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/scripts/Angular.js"></script>
+    <script src="~/scripts/AngularController.js"></script>
+    <link href="~/Content/indexstylesheet.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <table align="right"style="border:groove;border-color:chartreuse;width:350px">
+        <tr>
+            <td>
+                <div ng-app="myApp">
+                <div ng-controller="myCtrl" ng-init="GetAllData()" class="divList">
+                 <div class="form-horizontal" role="form">
+                 <div class="container">
+                  <div class="row">
+                   <h2 class="styleindex4">
+                           <span id="spn">Add New Item:</span>
+                   </h2>                
+                   </div>
+                   <form name="productadd">
+                    <table class="styleindex1">
+                     <tr>
+                     <td class="styleindex2">
+                     <label class="col-md-4 control-label">Name:</label>
+                      </td>
+                       <td>
+                        <input type="text" class="form-control" id="inputitem" placeholder="Name" ng-model="itemName" required>
+                        </td>
+                        </tr>
+                        <tr>
+                         <td class="styleindex2">
+                         <label class="col-md-4 control-label">Description:</label>
+                         </td>
+                          <td>
+                            <textarea type="text" class="form-control" id="descriptioninfo" placeholder="Item Description" ng-model="itemdescription"></textarea>
+                           </td>
+                           </tr>
+                            <tr>
+                             <td class="styleindex2">
+                            <label class="col-md-4 control-label">Price:</label>
+                             </td>
+                             <td>
+                            <input type="number" step="0.01" ng-maxlength="6" class="form-control" id="inputLabel3" placeholder="Price must be numeric" ng-model="itemprice" required>
+                              <span class="error" ng-show="productadd.input.$error.number">Price must be numeric</span>
+                               </td>
+                               <td></td>
+                               </tr>
+                               </table>
+                                    <span ng-show="productadd.$invalid" style="color:Red"><b>Name and Price must be entered</b></span>
+                                    @*<span ng-show="productadd.$dirty" style="color:Red"> Changes Done</span>*@
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-sm-6 col-lg-4">
+                                            <input type="button" id="btnSave" class="form-control btn-space button" value="Submit" ng-disabled="productadd.$invalid||productadd.input.$error" ng-click="InsertData()" />
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <br />
+                        <table cellpadding="12" class="table table-bordered table-hover">
+                            <caption class="styletab1">Menu:</caption>
+                            <thead>
+                                <tr class="styleindex2">
+                                    <td hidden>
+                                        <b>ITem No</b>
+                                    </td>
+                                    <td>
+                                        <b>Tea Name</b>
+                                    </td>
+                                    <td hidden>
+                                        <b>Description</b>
+                                    </td>
+                                    <td>
+                                        <b>Price</b>
+                                    </td>
+                                    <td>
+                                        <b>Actions</b>
+                                    </td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr ng-repeat="item in TeaInventories" class="styleindex3">
+                                    <td hidden>
+                                       {{item.Sr_no}}
+                                    </td>
+                                    <td>
+                                        <a href="/Inventory/Get_InventoryById/{{item.Sr_no}}"> {{item.TeaName}}</a>
+                                    </td>
+                                    <td hidden>
+                                        {{item.Description}}
+                                    </td>
+                                    <td>
+                                        {{item.Price}}
+                                    </td>
+                                    <td>
+                                        <input type="button" class="btn btn-warning button2" id="Updatebtn" value="Update" ng-click="Updateitem(item)" />
+                                        <input type="button" class="btn btn-danger button3" id="btn-delete" value="Delete" ng-click="Deleteitem(item)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+
+                    </div>
+                    @Html.Hidden("item_")
+
+                </div>
+
+
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
+
